@@ -1,0 +1,5 @@
+#sqlite database
+*.sqlite3
+
+# Various junk and temp files
+.DS_Store

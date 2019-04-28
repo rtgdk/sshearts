@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+
+<a href="{% url 'social:begin' 'facebook' %}?next=/app/">
+    <img src={% static "images/user-logo.png" %} style="height:228px;">
+    <br/>
+    <button class="btn btn-lg" style="background-color:#3b5998; color:#fff;">
+        <i class="fa fa-facebook" style="padding:10px;border-right: 1px solid rgba(0,0,0,0.2);"></i>
+        Login with Facebook
+    </button>
+</a>
+
+{% endblock %}

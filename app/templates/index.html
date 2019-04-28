@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_active %}
+<div class="col-md-4 col-sm-4">
+    <img src={{app_user.profile_url}} />
+</div>
+<div class="col-md-4 col-sm-4">
+    <h1> Hi {{app_user.name}} !!!! </h1>
+</div>
+<div class="col-md-4 col-sm-4">
+    <img src={{app_user.profile_pic.url}}/>
+</div>
+
+<form action="{% url 'social:disconnect' 'facebook' %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-lg btn-warning">
+        Disconnect
+    </button>
+</form>
+
+{% else %}
+
+<h1>To access this website, please <a href="login/"> login </a></h1>
+{% endif %}
+{% endblock %}
