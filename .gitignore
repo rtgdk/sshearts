@@ -3,3 +3,6 @@
 
 # Various junk and temp files
 .DS_Store
+
+# media folder
+media/

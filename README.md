@@ -8,11 +8,11 @@
 5. When user disconnects the app, the pipeline function - `disconnect_user` (app/pipeline.py) - makes user.is_active=false in the database and the user is logged out.
 
 
-## Installation
+## Installation Instructions
 1. Clone or download the repository. 
 2. Create a new virtual environment for the project.
     ```bash
-    virtualenv venv
+    virtualenv -p python3 venv
     source venv/bin/activate
     ```
 3. Go into the repo and install required python libraries giving in the requirements.txt file.
