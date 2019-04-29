@@ -26,7 +26,7 @@
     python manage.py migrate
     ```
     
-5. Fill in the `SOCIAL_AUTH_FACEBOOK_KEY`  and `SOCIAL_AUTH_FACEBOOK_SECRET` environment variable in your machine.
+5. Fill in the `SOCIAL_AUTH_FACEBOOK_KEY`  and `SOCIAL_AUTH_FACEBOOK_SECRET` environment variable in your machine. (See Instruction for creating FB App)
     ```bash
     export SOCIAL_AUTH_FACEBOOK_KEY=<your-fb-app-id>
     export SOCIAL_AUTH_FACEBOOK_SECRET=<<your-fb-app-secret-key>
@@ -36,7 +36,16 @@
     python manage.py runserver
     ```
 
-##Notes
+## Instruction for creating FB App
+
+1. Go to `developers.facebook.com/` click on My Apps and then Add a New App.
+2. Fill in the app name.
+3. From Settings > Basic, copy your app id and secret key to  `SOCIAL_AUTH_FACEBOOK_KEY`  and `SOCIAL_AUTH_FACEBOOK_SECRET`
+4. Click on `Add a Platform` and select `Website`
+5. For site url put http://localhost:8000 , if running locally else your app web url.
+6. And then in `App Domains` put localhost if running locally else put your website domain.
+ 
+## Notes
 
 1. I didn't know whether the profile picture should be saved in the database and should be picked up from facebook graph api. So I implemented both the scenario. After logging in, you would see 2 profile images - the left one is from graph api and the right one is from saved media picture.
 
