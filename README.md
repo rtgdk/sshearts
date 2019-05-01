@@ -50,7 +50,9 @@
 
 1. I didn't know whether the profile picture should be saved in the database and should be picked up from facebook graph api. So I implemented both the scenario. After logging in, you would see 2 profile images - the left one is from graph api and the right one is from saved media picture.
 
-2. Run with DEBUG=False in production, to redirect AuthCanceled error (when user cancels the facebook app request) to the home page.
+2. I didn't upload my app id and secret key to the repo since it's not safe to upload them on github. So I stored them on machine's environment variables and used them in the code(import os). Hope you can set up app id and secret in your environment variables too for successfully running the code)
 
-3. I could have used class based view to make it more easily extendable and reusable but the amount of http request to be implemented is too less so I used function based view instead.
+3. Run with DEBUG=False in production, to redirect AuthCanceled error (when user cancels the facebook app request) to the home page.
+
+4. I could have used class based view to make it more easily extendable and reusable but the amount of http request to be implemented is too less so I used function based view instead.
 
