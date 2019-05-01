@@ -44,6 +44,7 @@
 4. Click on `Add a Platform` and select `Website`
 5. For site url put http://localhost:8000 , if running locally else your app web url.
 6. And then in `App Domains` put localhost if running locally else put your website domain.
+7. Now go to Products > Facebook Login > Settings and put `http://localhost:8000/app/deauthorize/` in the `Deauthorize Callback URL`. Or '<your-hosted-website-url>/app/deauthorize/' if not running locally.
  
 ## Notes
 
@@ -51,5 +52,5 @@
 
 2. Run with DEBUG=False in production, to redirect AuthCanceled error (when user cancels the facebook app request) to the home page.
 
-3. I could have used class based view to make it more easily extendable and reusable but the amount of http request to be implemented is too less so I used function based view.
+3. I could have used class based view to make it more easily extendable and reusable but the amount of http request to be implemented is too less so I used function based view instead.
 
